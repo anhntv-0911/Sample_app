@@ -31,3 +31,48 @@
 
 en:
   hello: "Hello world"
+  static_pages:
+    home:
+      title: "Welcome to the Sample App"
+      contentH: "This is the home page for"
+      name: "Ruby on Rails"
+      contentF: "sample application."
+      signup: "Sign up now!"
+      home: "Home"
+      help: "Help"
+      about: "About"
+      login: "Log in"
+      contact: "contact"
+      news: "News"
+      e: "English"
+      v: "Vietnamese"
+      sampleapp: "SAMPLE APP"
+  footer:
+    nameT: "Ruby on Rails Tutorial"
+    news: "News"
+    home: "Home"
+    help: "Help"
+    about: "About"
+    login: "Log in"
+    contact: "contact"
+    the: "The"
+    by: "by"
+    mi: "Michael Hartl"
+  header:
+    sampleapp: "sample app"
+  about:
+    book: "book"
+    the: "The"
+    isa: "is a"
+  contact:
+    page:  "Contact"
+    content: "Contact the Ruby on Rails Tutorial about the sample app at the"
+    name: "contact page"
+  help:
+    content: "Get help on the Ruby on Rails Tutorial at the"
+    nameR: "Rails Tutorial help page"
+    nameT: "Ruby on Rails Tutorial"
+    contentF: "To get help on this sample app, see the"
+  users:
+    signup: "Sign up"
+    content: "Find me in app/views/users/new.html.erb"
