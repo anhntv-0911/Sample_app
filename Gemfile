@@ -15,6 +15,7 @@ gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-sass", "~> 3.4", ">= 3.4.1"
 gem "rails-i18n"
 gem "config"
+gem "bcrypt", "3.1.12"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
