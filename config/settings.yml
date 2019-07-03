@@ -1,0 +1,3 @@
+client:
+  host: "localhost:3000"
+  newRailsTutorial: "http://news.railstutorial.org/"

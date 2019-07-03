@@ -1,0 +1,9 @@
+vi:
+  hello: "Chào thế giới"
+  static_pages:
+    home:
+      title: "Chào mừng bạn đến với ứng dụng mẫu"
+      contentH: "Đây là trang chủ cho"
+      name: "Ruby on Rails"
+      contentF: "ứng dụng mẫu"
+      signup: "Đăng ký ngay!"
