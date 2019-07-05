@@ -6,3 +6,5 @@ validate:
   maxEmail: 255
   minPass: 6
   validEmail: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
+gravatar:
+  size: 80
