@@ -93,3 +93,5 @@ en:
     new: "new"
   flash:
     invalid: "email or password is invalid"
+  login:
+    rememberme: "Remember me for the next log in"
