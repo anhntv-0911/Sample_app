@@ -76,3 +76,9 @@ en:
   users:
     signup: "Sign up"
     content: "Find me in app/views/users/new.html.erb"
+    submitCreate: "Create my account"
+    success: "Welcome to the Sample App!"
+    noAccount: "Have no user has id 10"
+  error_page:
+    content: "The form contains"
+    error: "error"
