@@ -1,11 +1,26 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to t("header.sampleapp"), "#", id: "logo" %>
+    <%= link_to t("header.sampleapp"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t("static_pages.home.home"), root_path %></li>
         <li><%= link_to t("static_pages.home.help"), help_path %></li>
-        <li><%= link_to t("static_pages.home.login"), "#" %></li>
+        <% if logged_in? %>
+          <li><%= link_to t("header.users"), "#" %></li>
+          <li class="dropdown">
+            <%= link_to t("header.account"), "#", :class => "dropdown-toggle", "data-toggle" => "dropdown" %>
+            <ul class="dropdown-menu">
+              <li><%= link_to t("header.profile"), current_user %></li>
+              <li><%= link_to t("header.settings"), '#' %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to t("static_pages.home.logout"), logout_path, method: :delete %>
+              </li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to t("static_pages.home.login"), login_path %></li>
+        <% end %>
       </ul>
     </nav>
   </div>
