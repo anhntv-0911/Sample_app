@@ -8,3 +8,6 @@ validate:
   validEmail: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
 gravatar:
   size: 80
+  host: "http://gravatar.com/emails"
+  size2: 50
+user_per_page: 20

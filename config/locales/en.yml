@@ -84,6 +84,15 @@ en:
     submitCreate: "Create my account"
     success: "Welcome to the Sample App!"
     noAccount: "Has no user"
+    edit: "Edit user"
+    update: "Update profile"
+    saveChange: "Save changes"
+    change: "change"
+    createMyAcc: "Create my account"
+    updateSuccess: "Updated profile"
+    pleaseLog: "Please log in"
+    all: "All users"
+    delete: "Delete"
   error_page:
     content: "The form contains"
     error: "error"
@@ -93,5 +102,9 @@ en:
     new: "new"
   flash:
     invalid: "email or password is invalid"
+    delSuccess: "Delete success"
+    delFail: "Delete failed"
   login:
     rememberme: "Remember me for the next log in"
+  confirm:
+    sure: "Are you sure!"

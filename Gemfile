@@ -17,6 +17,9 @@ gem "rails-i18n"
 gem "config"
 gem "bcrypt", "3.1.12"
 gem "jquery-rails"
+gem "ffaker"
+gem "kaminari"
+gem "bootstrap-kaminari-views"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
