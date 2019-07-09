@@ -104,7 +104,18 @@ en:
     invalid: "email or password is invalid"
     delSuccess: "Delete success"
     delFail: "Delete failed"
+    notifyCheck: "Please check your email to activate your account."
+    activatedSuccess: "Account activated"
+    invalidActivationLink: "Invalid activation link"
+    message:
+      accNotActivated: "Account not activated. "
+      checkemail: "Check your email for the activation link."
   login:
     rememberme: "Remember me for the next log in"
   confirm:
     sure: "Are you sure!"
+  mail:
+    subject: "Account activation"
+    hi: "Hi"
+    content: "Welcome to the Sample App! Click on the link below to activate your account:"
+    activate: "Activate"
