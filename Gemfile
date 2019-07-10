@@ -20,6 +20,7 @@ gem "jquery-rails"
 gem "ffaker"
 gem "kaminari"
 gem "bootstrap-kaminari-views"
+gem "figaro"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
