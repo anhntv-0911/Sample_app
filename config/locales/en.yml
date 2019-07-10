@@ -100,6 +100,7 @@ en:
     login: "Log in"
     newuser: "New user ?"
     new: "new"
+    forgotPassword: "Forgot password"
   flash:
     invalid: "email or password is invalid"
     delSuccess: "Delete success"
@@ -107,9 +108,9 @@ en:
     notifyCheck: "Please check your email to activate your account."
     activatedSuccess: "Account activated"
     invalidActivationLink: "Invalid activation link"
-    message:
-      accNotActivated: "Account not activated. "
-      checkemail: "Check your email for the activation link."
+    sentPasswordReset: "Email sent with password reset instructions"
+    emailInvalid: "Email address not found"
+    passExp: "Password reset has expired"
   login:
     rememberme: "Remember me for the next log in"
   confirm:
@@ -119,3 +120,16 @@ en:
     hi: "Hi"
     content: "Welcome to the Sample App! Click on the link below to activate your account:"
     activate: "Activate"
+    passwordReset: "password reset"
+    head: "To reset your password click the link below:"
+    contentP: "This link will expire in two hours."
+    foot: "If you did not request your password to be reset, please ignore this email and
+your password will stay as it is."
+  passwordReset:
+    submit: "Submit"
+    resetPassword: "Reset password"
+    updatePass: "Update password"
+    confirmation: "Comfirmation"
+    emailValid: "Email is not valid"
+    notEmpty: "Can't be empty"
+    success: "Password has been reset"
