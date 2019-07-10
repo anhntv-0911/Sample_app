@@ -15,3 +15,5 @@ mailer:
   host: "localhost:3000"
   protocol: "http"
 mail: "vananhptit97@gmail,com"
+passwordReset:
+  time: 2
