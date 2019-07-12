@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: %i(edit update)
+  before_action :logged_in_user, except: %i(show new create)
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
   before_action :load_user, except: %i(index new create)
@@ -8,7 +8,9 @@ class UsersController < ApplicationController
     @users = User.activated.page(params[:page]).per Settings.user_per_page
   end
 
-  def show; end
+  def show
+    @microposts = @user.microposts.desc.page(params[:page]).per Settings.user_per_page
+  end
 
   def new
     @user = User.new
@@ -18,7 +20,7 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save
       @user.send_activation_email
-      flash[:info] = t "flash.notifyCheck"
+      flash[:info] = t "flash.notify_check"
       redirect_to @user
     else
       render :new
@@ -29,7 +31,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update user_params
-      flash[:success] = t "users.updateSuccess"
+      flash[:success] = t "users.update_success"
       redirect_to @user
     else
       render :edit
@@ -38,10 +40,10 @@ class UsersController < ApplicationController
 
   def destroy
     if @user.destroy
-      flash[:success] = t "flash.delSuccess"
+      flash[:success] = t "flash.del_success"
       redirect_to users_path
     else
-      flash[:danger] = t "flash.delFail"
+      flash[:danger] = t "flash.del_fail"
       redirect_to users_path
     end
   end
@@ -49,13 +51,6 @@ class UsersController < ApplicationController
   private
     def user_params
       params.require(:user).permit :name, :email, :password, :password_confirmation
-    end
-
-    def logged_in_user
-      return if logged_in?
-      store_location
-      flash[:danger] = t "users.pleaseLog"
-      redirect_to login_path
     end
 
     def correct_user
@@ -69,7 +64,7 @@ class UsersController < ApplicationController
     def load_user
       @user = User.find_by id: params[:id]
       return if @user
-      flash[:notify] = t "users.noAccount"
+      flash[:notify] = t "users.no_account"
       redirect_to root_path
     end
 end

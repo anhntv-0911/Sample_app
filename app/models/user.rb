@@ -1,5 +1,7 @@
 class User < ApplicationRecord
-  VALID_EMAIL_REGEX = Settings.validate.validEmail
+  VALID_EMAIL_REGEX = Settings.validate.valid_email
+
+  has_many :microposts, dependent: :destroy
 
   scope :activated, -> {where activated: true}
 
@@ -7,9 +9,9 @@ class User < ApplicationRecord
   before_save { email.downcase! }
   before_create :create_activation_digest
 
-  validates :name, presence: true, length: { maximum: Settings.validate.maxName }
-  validates :email, presence: true, length: { maximum: Settings.validate.maxEmail }, format: {with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
-  validates :password, presence: true, length: { minimum: Settings.validate.minPass }
+  validates :name, presence: true, length: { maximum: Settings.validate.max_name }
+  validates :email, presence: true, length: { maximum: Settings.validate.max_email }, format: {with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
+  validates :password, presence: true, length: { minimum: Settings.validate.min_pass }
 
   has_secure_password
 
@@ -46,7 +48,11 @@ class User < ApplicationRecord
   end
 
   def password_reset_expired?
-    reset_sent_at < Settings.passwordReset.time.hours.ago
+    reset_sent_at < Settings.password_reset.time.hours.ago
+  end
+
+  def feed
+    microposts
   end
 
   class << self
