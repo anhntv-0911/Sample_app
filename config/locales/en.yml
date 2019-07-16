@@ -152,3 +152,8 @@ your password will stay as it is."
   micropost_title:
     one: "%{count} Micropost"
     other: "%{count} Microposts"
+  follow:
+    following: "following"
+    followers: "followers"
+    follow: "Follow"
+    unfollow: "Unfollow"
