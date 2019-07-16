@@ -1,11 +1,12 @@
 client:
   host: "localhost:3000"
-  newRailsTutorial: "http://news.railstutorial.org/"
+  new_rails_tutorial: "http://news.railstutorial.org/"
 validate:
-  maxName: 50
-  maxEmail: 255
-  minPass: 6
-  validEmail: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
+  max_name: 50
+  max_email: 255
+  min_pass: 6
+  max_content: 140
+  valid_email: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
 gravatar:
   size: 80
   host: "http://gravatar.com/emails"
@@ -15,5 +16,9 @@ mailer:
   host: "localhost:3000"
   protocol: "http"
 mail: "vananhptit97@gmail,com"
-passwordReset:
+password_reset:
   time: 2
+picture:
+  size: 5
+  accept: "image/jpeg,image/gif,image/png"
+  size1024: 1024

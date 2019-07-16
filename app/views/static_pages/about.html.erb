@@ -1,8 +1,8 @@
 <% provide :title, t("static_pages.home.about") %>
 <h1><%= t("static_pages.home.about")%></h1>
 <p>
-  <%= t "about.the" %> <%= link_to t("static_pages.home.name"), Settings.client.newRailsTutorial %> 
+  <%= t "about.the" %> <%= link_to t("static_pages.home.name"), Settings.client.new_rails_tutorial %> 
   <%= t "about.isa" %>
-  <%= link_to t("about.book"), Settings.client.newRailsTutorial %>
+  <%= link_to t("about.book"), Settings.client.new_rails_tutorial %>
   <%= debug(params) if Rails.env.development? %>
 </p>

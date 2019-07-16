@@ -13,4 +13,11 @@ class ApplicationController < ActionController::Base
     locale = params[:locale].to_s.strip.to_sym
     I18n.locale = I18n.available_locales.include?(locale) ? locale : I18n.default_locale
   end
+
+  def logged_in_user
+    return if logged_in?
+    store_location
+    flash[:danger] = t "flash.please_log"
+    redirect_to login_url
+  end
 end
