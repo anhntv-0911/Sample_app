@@ -2,6 +2,7 @@ class Micropost < ApplicationRecord
   belongs_to :user
 
   scope :desc, -> { order(created_at: :desc) }
+  scope :by_ids, ->(user_ids) { where user_id: user_ids }
   mount_uploader :picture, PictureUploader
 
   delegate :name, to: :user, prefix: true

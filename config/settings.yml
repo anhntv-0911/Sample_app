@@ -11,6 +11,7 @@ gravatar:
   size: 80
   host: "http://gravatar.com/emails"
   size2: 50
+  size30: 30
 user_per_page: 20
 mailer:
   host: "localhost:3000"
