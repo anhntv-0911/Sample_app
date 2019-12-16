@@ -126,7 +126,7 @@ GEM
       dry-inflector (~> 0.1, >= 0.1.2)
       dry-logic (~> 1.0, >= 1.0.2)
     erubi (1.8.0)
-    excon (0.64.0)
+    excon (0.71.0)
     execjs (2.7.0)
     ffaker (2.11.0)
     ffi (1.11.1)
